@@ -3,18 +3,26 @@ import 'package:flutter/material.dart';
 class TitleLargeText extends StatelessWidget {
   final String text;
   final Color? color;
+  final TextAlign? textAlign;
+  final FontWeight? fontWeight;
 
   const TitleLargeText({
     super.key,
     required this.text,
     this.color,
+    this.textAlign,
+    this.fontWeight,
   });
 
   @override
   Widget build(BuildContext context) {
     return Text(
+      textAlign: textAlign,
       text,
-      style: Theme.of(context).textTheme.titleLarge!.copyWith(color: color),
+      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+            color: color,
+            fontWeight: fontWeight,
+          ),
     );
   }
 }
@@ -22,18 +30,26 @@ class TitleLargeText extends StatelessWidget {
 class TitleMediumText extends StatelessWidget {
   final String text;
   final Color? color;
+  final TextAlign? textAlign;
+  final FontWeight? fontWeight;
 
   const TitleMediumText({
     super.key,
     required this.text,
     this.color,
+    this.textAlign,
+    this.fontWeight,
   });
 
   @override
   Widget build(BuildContext context) {
     return Text(
+      textAlign: textAlign,
       text,
-      style: Theme.of(context).textTheme.titleMedium!.copyWith(color: color),
+      style: Theme.of(context).textTheme.titleMedium!.copyWith(
+            color: color,
+            fontWeight: fontWeight,
+          ),
     );
   }
 }
@@ -41,18 +57,26 @@ class TitleMediumText extends StatelessWidget {
 class TitleSmallText extends StatelessWidget {
   final String text;
   final Color? color;
+  final TextAlign? textAlign;
+  final FontWeight? fontWeight;
 
   const TitleSmallText({
     super.key,
     required this.text,
     this.color,
+    this.textAlign,
+    this.fontWeight,
   });
 
   @override
   Widget build(BuildContext context) {
     return Text(
+      textAlign: textAlign,
       text,
-      style: Theme.of(context).textTheme.titleSmall!.copyWith(color: color),
+      style: Theme.of(context).textTheme.titleSmall!.copyWith(
+            color: color,
+            fontWeight: fontWeight,
+          ),
     );
   }
 }
