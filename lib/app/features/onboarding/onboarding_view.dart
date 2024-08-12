@@ -1,5 +1,6 @@
 import 'package:arkatama_test/app/features/onboarding/model/onboarding_model.dart';
 import 'package:arkatama_test/app/features/onboarding/onboarding_controller.dart';
+import 'package:arkatama_test/app/features/product/product_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,6 +16,7 @@ class OnboardingView extends GetView<OnboardingController> {
         alignment: Alignment.center,
         children: [
           PageView.builder(
+            physics: const NeverScrollableScrollPhysics(),
             controller: controller.pageController,
             onPageChanged: (int index) {
               controller.currentPage.value = index;
@@ -29,9 +31,8 @@ class OnboardingView extends GetView<OnboardingController> {
                     alignment: Alignment.topCenter,
                     child: Image.asset(
                       data.imagePath,
-                      height: index == 1
-                          ? Get.height * 0.75
-                          : Get.height * 0.72,
+                      height:
+                          index == 1 ? Get.height * 0.75 : Get.height * 0.72,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -76,7 +77,15 @@ class OnboardingView extends GetView<OnboardingController> {
                             width: Get.width,
                             height: Get.height * 0.05,
                             child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  controller.pageController.nextPage(
+                                    duration: const Duration(milliseconds: 300),
+                                    curve: Curves.easeIn,
+                                  );
+                                  if (index == onboardingData.length - 1) {
+                                    Get.to(() => const ProductView());
+                                  }
+                                },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: const Color(0xff242626),
                                   foregroundColor: const Color(0xffffffff),
@@ -97,12 +106,17 @@ class OnboardingView extends GetView<OnboardingController> {
           Positioned(
             top: Get.height * 0.06,
             right: Get.width * 0.05,
-            child: const Text(
-              'Lewati',
-              style: TextStyle(
-                color: Color(0xff434747),
-                fontWeight: FontWeight.w500,
-                fontSize: 16,
+            child: GestureDetector(
+              onTap: () {
+                Get.to(() => const ProductView());
+              },
+              child: const Text(
+                'Lewati',
+                style: TextStyle(
+                  color: Color(0xff434747),
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16,
+                ),
               ),
             ),
           ),
