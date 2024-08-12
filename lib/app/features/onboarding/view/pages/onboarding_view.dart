@@ -1,10 +1,10 @@
+import 'package:arkatama_test/app/components/pages/product_feature/product_feature_page.dart';
 import 'package:arkatama_test/app/features/onboarding/controller/onboarding_controller.dart';
 import 'package:arkatama_test/app/features/onboarding/model/onboarding_model.dart';
 import 'package:arkatama_test/app/features/onboarding/view/atoms/skip_text.dart';
 import 'package:arkatama_test/app/features/onboarding/view/molecules/page_indicator.dart';
 import 'package:arkatama_test/app/features/onboarding/view/organisms/onboarding_screen.dart';
 import 'package:arkatama_test/app/features/onboarding/view/templates/onboarding_template.dart';
-import 'package:arkatama_test/app/features/product/product_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -31,7 +31,9 @@ class OnboardingView extends GetView<OnboardingController> {
       ),
       skipButton: SkipText(
         onTap: () {
-          Get.to(() => const ProductView());
+          Get.to(
+            () => const ProductFeaturePage(),
+          );
         },
       ),
       pageIndicator: Obx(

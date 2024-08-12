@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Aksamedia Test',
       theme: ThemeData(
         useMaterial3: true,
         textTheme: buildTextTheme(),

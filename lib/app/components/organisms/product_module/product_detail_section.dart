@@ -1,0 +1,57 @@
+import 'package:arkatama_test/app/components/atoms/custom_divider.dart';
+import 'package:arkatama_test/app/components/molecules/product_module/commission_info.dart';
+import 'package:arkatama_test/app/components/molecules/product_module/price_info.dart';
+import 'package:arkatama_test/app/components/molecules/product_module/product_bagde.dart';
+import 'package:arkatama_test/app/components/molecules/product_module/product_title.dart';
+import 'package:flutter/material.dart';
+
+class ProductDetailSection extends StatelessWidget {
+  const ProductDetailSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const ProductBadge(),
+              Image.asset(
+                'assets/images/product/icons/share.png',
+                width: 24,
+                height: 24,
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+          const Align(
+            alignment: Alignment.centerLeft,
+            child: ProductTitle(),
+          ),
+          const SizedBox(height: 14),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              PriceInfo(
+                price: 'Rp 178.000',
+                description: 'Harga Customer',
+              ),
+              CustomDivider(
+                width: 1,
+                height: 40,
+              ),
+              PriceInfo(
+                price: 'Rp 178.000',
+                description: 'Harga Customer',
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+          const CommissionInfo(),
+        ],
+      ),
+    );
+  }
+}

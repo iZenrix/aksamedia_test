@@ -43,7 +43,11 @@ class FooterCard extends StatelessWidget {
             const SizedBox(height: 18),
             DescriptionText(text: description),
             const SizedBox(height: 35),
-            PrimaryButton(text: textButton, onPressed: onPressed)
+            PrimaryButton(
+              text: textButton,
+              onPressed: onPressed,
+              foregroundColor: Colors.white,
+            )
           ],
         ),
       ),
