@@ -13,10 +13,9 @@ class DescriptionText extends StatelessWidget {
     return Text(
       textAlign: TextAlign.center,
       text,
-      style: const TextStyle(
-        fontSize: 12,
-        fontWeight: FontWeight.w400,
-      ),
+      style: Theme.of(context).textTheme.bodySmall!.copyWith(
+            color: const Color(0xff242626),
+          ),
     );
   }
 }

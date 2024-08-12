@@ -13,10 +13,10 @@ class TitleText extends StatelessWidget {
     return Text(
       textAlign: TextAlign.center,
       text,
-      style: const TextStyle(
-        fontSize: 24,
-        fontWeight: FontWeight.w700,
-      ),
+      style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+            fontWeight: FontWeight.w700,
+        color: const Color(0xff242626),
+          ),
     );
   }
 }

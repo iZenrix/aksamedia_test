@@ -12,13 +12,11 @@ class SkipText extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: const Text(
+      child: Text(
         'Lewati',
-        style: TextStyle(
-          color: Color(0xff434747),
-          fontWeight: FontWeight.w500,
-          fontSize: 16,
-        ),
+        style: Theme.of(context).textTheme.titleMedium!.copyWith(
+              color: const Color(0xff434747),
+            ),
       ),
     );
   }
