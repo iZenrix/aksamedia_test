@@ -1,3 +1,4 @@
+import 'package:arkatama_test/app/components/atoms/text/title_text.dart';
 import 'package:flutter/material.dart';
 
 class SkipText extends StatelessWidget {
@@ -12,11 +13,9 @@ class SkipText extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Text(
-        'Lewati',
-        style: Theme.of(context).textTheme.titleMedium!.copyWith(
-              color: const Color(0xff434747),
-            ),
+      child: const TitleMediumText(
+        text: 'Lewati',
+        color: Color(0xff434747),
       ),
     );
   }

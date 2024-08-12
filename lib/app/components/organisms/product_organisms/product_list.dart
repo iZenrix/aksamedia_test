@@ -28,7 +28,7 @@ class ProductList extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           SizedBox(
-            height: Get.height * 0.335,
+            height: Get.height * 0.35,
             child: ListView.builder(
               padding: EdgeInsets.zero,
               scrollDirection: Axis.horizontal,

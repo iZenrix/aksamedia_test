@@ -1,5 +1,6 @@
-import 'package:arkatama_test/app/components/atoms/onboarding_atoms/onboarding_atoms.dart';
 import 'package:arkatama_test/app/components/atoms/primary_button.dart';
+import 'package:arkatama_test/app/components/atoms/text/body_text.dart';
+import 'package:arkatama_test/app/components/atoms/text/headline_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -38,11 +39,21 @@ class FooterCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TitleText(text: title),
+            HeadlineSmallText(
+              text: title,
+              weight: FontWeight.w700,
+              color: const Color(0xff242626),
+              alignment: TextAlign.center,
+            ),
             const SizedBox(height: 18),
-            DescriptionText(text: description),
+            BodySmallText(
+              text: description,
+              color: const Color(0xff242626),
+              textAlign: TextAlign.center,
+            ),
             const SizedBox(height: 35),
             PrimaryButton(
+              height: 40,
               text: textButton,
               onPressed: onPressed,
               foregroundColor: Colors.white,

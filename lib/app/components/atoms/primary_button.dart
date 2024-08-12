@@ -1,3 +1,4 @@
+import 'package:arkatama_test/app/components/atoms/text/title_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -23,7 +24,10 @@ class PrimaryButton extends StatelessWidget {
     this.borderRadius,
     this.foregroundColor,
     this.backgroundColor,
-    this.fontWeight, this.widget, this.borderSide, this.padding,
+    this.fontWeight,
+    this.widget,
+    this.borderSide,
+    this.padding,
   });
 
   @override
@@ -38,20 +42,19 @@ class PrimaryButton extends StatelessWidget {
           foregroundColor: foregroundColor ?? const Color(0xffF5F6F6),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 10),
-            side: borderSide ?? const BorderSide(
-              color: Color(0xff242626), // Border color
-              width: 0, // Border width
-            ),
+            side: borderSide ??
+                const BorderSide(
+                  color: Color(0xff242626), // Border color
+                  width: 0, // Border width
+                ),
           ),
           padding: padding,
         ),
-        child: widget ?? Text(
-          text ?? '',
-          style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                fontWeight: fontWeight,
-            color: foregroundColor ?? const Color(0xffF5F6F6),
-              ),
-        ),
+        child: widget ??
+            TitleSmallText(
+              text: text ?? '',
+              color: foregroundColor ?? const Color(0xffF5F6F6),
+            ),
       ),
     );
   }

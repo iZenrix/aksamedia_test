@@ -41,18 +41,25 @@ class HeadlineMediumText extends StatelessWidget {
 class HeadlineSmallText extends StatelessWidget {
   final String text;
   final Color? color;
+  final FontWeight? weight;
+  final TextAlign? alignment;
 
   const HeadlineSmallText({
     super.key,
     required this.text,
     this.color,
+    this.weight, this.alignment,
   });
 
   @override
   Widget build(BuildContext context) {
     return Text(
+      textAlign: alignment,
       text,
-      style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: color),
+      style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+            color: color,
+            fontWeight: weight,
+          ),
     );
   }
 }
