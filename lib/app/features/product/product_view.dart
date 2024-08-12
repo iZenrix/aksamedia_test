@@ -1,11 +1,8 @@
-import 'package:arkatama_test/app/components/organisms/product_module/description_section.dart';
-import 'package:arkatama_test/app/components/organisms/product_module/product_detail_section.dart';
-import 'package:arkatama_test/app/components/organisms/product_module/product_list.dart';
-import 'package:arkatama_test/app/components/organisms/product_module/product_option_selector.dart';
-import 'package:arkatama_test/app/features/onboarding/view/atoms/primary_button.dart';
+import 'package:arkatama_test/app/components/organisms/product_organisms/product_organisms.dart';
+import 'package:arkatama_test/app/components/atoms/primary_button.dart';
 import 'package:arkatama_test/app/features/product/controller/product_controller.dart';
-import 'package:arkatama_test/app/features/product/view/molecules/product_header.dart';
-import 'package:arkatama_test/app/features/product/view/organisms/product_image_showcase.dart';
+import 'package:arkatama_test/app/components/molecules/product_molecules/product_header.dart';
+import 'package:arkatama_test/app/components/organisms/product_organisms/product_image_showcase.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

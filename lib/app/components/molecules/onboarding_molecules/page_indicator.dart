@@ -1,4 +1,4 @@
-import 'package:arkatama_test/app/features/onboarding/view/atoms/page_indicator_dot.dart';
+import 'package:arkatama_test/app/components/atoms/onboarding_atoms/onboarding_atoms.dart';
 import 'package:flutter/material.dart';
 
 class PageIndicator extends StatelessWidget {

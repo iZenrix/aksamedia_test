@@ -1,4 +1,4 @@
-import 'package:arkatama_test/app/components/molecules/product_module/product_card.dart';
+import 'package:arkatama_test/app/components/molecules/product_molecules/product_molecules.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

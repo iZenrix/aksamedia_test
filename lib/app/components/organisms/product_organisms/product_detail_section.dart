@@ -1,8 +1,5 @@
 import 'package:arkatama_test/app/components/atoms/custom_divider.dart';
-import 'package:arkatama_test/app/components/molecules/product_module/commission_info.dart';
-import 'package:arkatama_test/app/components/molecules/product_module/price_info.dart';
-import 'package:arkatama_test/app/components/molecules/product_module/product_bagde.dart';
-import 'package:arkatama_test/app/components/molecules/product_module/product_title.dart';
+import 'package:arkatama_test/app/components/molecules/product_molecules/product_molecules.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailSection extends StatelessWidget {

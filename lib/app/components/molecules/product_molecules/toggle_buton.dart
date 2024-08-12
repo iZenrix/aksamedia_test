@@ -1,4 +1,4 @@
-import 'package:arkatama_test/app/components/atoms/product_module/toggle_icon.dart';
+import 'package:arkatama_test/app/components/atoms/product_atoms/product_atoms.dart';
 import 'package:flutter/material.dart';
 
 class ToggleButton extends StatelessWidget {

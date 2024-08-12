@@ -1,10 +1,10 @@
-import 'package:arkatama_test/app/components/pages/product_feature/product_feature_page.dart';
+import 'package:arkatama_test/app/components/atoms/onboarding_atoms/onboarding_atoms.dart';
+import 'package:arkatama_test/app/components/molecules/onboarding_molecules/onboarding_molecules.dart';
+import 'package:arkatama_test/app/components/organisms/onboarding_organisms/onboarding_organisms.dart';
+import 'package:arkatama_test/app/components/templates/onboarding_templates/onboarding_template.dart';
 import 'package:arkatama_test/app/features/onboarding/controller/onboarding_controller.dart';
 import 'package:arkatama_test/app/features/onboarding/model/onboarding_model.dart';
-import 'package:arkatama_test/app/features/onboarding/view/atoms/skip_text.dart';
-import 'package:arkatama_test/app/features/onboarding/view/molecules/page_indicator.dart';
-import 'package:arkatama_test/app/features/onboarding/view/organisms/onboarding_screen.dart';
-import 'package:arkatama_test/app/features/onboarding/view/templates/onboarding_template.dart';
+import 'package:arkatama_test/app/features/product/view/product_feature_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

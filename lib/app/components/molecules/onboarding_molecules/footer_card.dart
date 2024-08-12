@@ -1,6 +1,5 @@
-import 'package:arkatama_test/app/features/onboarding/view/atoms/description_text.dart';
-import 'package:arkatama_test/app/features/onboarding/view/atoms/primary_button.dart';
-import 'package:arkatama_test/app/features/onboarding/view/atoms/title_text.dart';
+import 'package:arkatama_test/app/components/atoms/onboarding_atoms/onboarding_atoms.dart';
+import 'package:arkatama_test/app/components/atoms/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

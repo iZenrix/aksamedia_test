@@ -1,4 +1,4 @@
-import 'package:arkatama_test/app/features/product/view/atoms/image_button.dart';
+import 'package:arkatama_test/app/components/atoms/product_atoms/image_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

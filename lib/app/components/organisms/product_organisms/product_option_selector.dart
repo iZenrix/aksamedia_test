@@ -1,5 +1,4 @@
-import 'package:arkatama_test/app/components/molecules/product_module/color_selector.dart';
-import 'package:arkatama_test/app/components/molecules/product_module/size_selector.dart';
+import 'package:arkatama_test/app/components/molecules/product_molecules/product_molecules.dart';
 import 'package:flutter/material.dart';
 
 class ProductOptionSelector extends StatelessWidget {

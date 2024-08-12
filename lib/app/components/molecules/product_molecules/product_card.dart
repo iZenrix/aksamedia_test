@@ -1,4 +1,4 @@
-import 'package:arkatama_test/app/features/onboarding/view/atoms/primary_button.dart';
+import 'package:arkatama_test/app/components/atoms/primary_button.dart';
 import 'package:arkatama_test/app/features/product/helper/badge_clipper.dart';
 import 'package:flutter/material.dart';
 

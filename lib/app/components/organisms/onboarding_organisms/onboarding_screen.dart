@@ -1,5 +1,5 @@
 import 'package:arkatama_test/app/features/onboarding/model/onboarding_model.dart';
-import 'package:arkatama_test/app/features/onboarding/view/organisms/onboarding_content.dart';
+import 'package:arkatama_test/app/components/organisms/onboarding_organisms/onboarding_content.dart';
 import 'package:arkatama_test/app/features/product/product_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

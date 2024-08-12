@@ -1,5 +1,5 @@
 import 'package:arkatama_test/app/core/theme/text_theme.dart';
-import 'package:arkatama_test/app/features/onboarding/view/pages/onboarding_view.dart';
+import 'package:arkatama_test/app/features/onboarding/view/onboarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
