@@ -1,11 +1,11 @@
 import 'package:arkatama_test/app/features/onboarding/model/onboarding_model.dart';
-import 'package:arkatama_test/app/features/onboarding/onboarding_controller.dart';
+import 'package:arkatama_test/app/features/onboarding/controller/onboarding_controller.dart';
 import 'package:arkatama_test/app/features/product/product_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class OnboardingView extends GetView<OnboardingController> {
-  const OnboardingView({super.key});
+class OnboardingViewOld extends GetView<OnboardingController> {
+  const OnboardingViewOld({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,6 @@ class OnboardingView extends GetView<OnboardingController> {
         alignment: Alignment.center,
         children: [
           PageView.builder(
-            physics: const NeverScrollableScrollPhysics(),
             controller: controller.pageController,
             onPageChanged: (int index) {
               controller.currentPage.value = index;
@@ -77,23 +76,24 @@ class OnboardingView extends GetView<OnboardingController> {
                             width: Get.width,
                             height: Get.height * 0.05,
                             child: ElevatedButton(
-                                onPressed: () {
-                                  controller.pageController.nextPage(
-                                    duration: const Duration(milliseconds: 300),
-                                    curve: Curves.easeIn,
-                                  );
-                                  if (index == onboardingData.length - 1) {
-                                    Get.to(() => const ProductView());
-                                  }
-                                },
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color(0xff242626),
-                                  foregroundColor: const Color(0xffffffff),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
+                              onPressed: () {
+                                controller.pageController.nextPage(
+                                  duration: const Duration(milliseconds: 300),
+                                  curve: Curves.easeIn,
+                                );
+                                if (index == onboardingData.length - 1) {
+                                  Get.to(() => const ProductView());
+                                }
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xff242626),
+                                foregroundColor: const Color(0xffffffff),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: const Text('Selanjutnya')),
+                              ),
+                              child: const Text('Selanjutnya'),
+                            ),
                           ),
                         ],
                       ),

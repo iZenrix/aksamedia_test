@@ -1074,8 +1074,8 @@ class ProductView extends GetView<ProductController> {
                                               shape: RoundedRectangleBorder(
                                                 borderRadius:
                                                     BorderRadius.circular(10),
-                                                side: BorderSide(
-                                                  color: const Color(
+                                                side: const BorderSide(
+                                                  color: Color(
                                                       0xff242626), // Border color
                                                   width: 1, // Border width
                                                 ),
