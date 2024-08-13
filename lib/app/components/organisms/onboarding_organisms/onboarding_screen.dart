@@ -1,6 +1,6 @@
-import 'package:arkatama_test/app/features/onboarding/model/onboarding_model.dart';
-import 'package:arkatama_test/app/components/organisms/onboarding_organisms/onboarding_content.dart';
-import 'package:arkatama_test/app/features/product/view/product_feature_page.dart';
+import 'package:aksamedia_test/app/components/organisms/onboarding_organisms/onboarding_organisms.dart';
+import 'package:aksamedia_test/app/features/onboarding/model/onboarding_model.dart';
+import 'package:aksamedia_test/app/features/product/view/product_feature_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

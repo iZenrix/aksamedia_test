@@ -1,5 +1,5 @@
-import 'package:arkatama_test/app/components/atoms/text/body_text.dart';
-import 'package:arkatama_test/app/components/molecules/product_molecules/product_molecules.dart';
+import 'package:aksamedia_test/app/components/atoms/text/body_text.dart';
+import 'package:aksamedia_test/app/components/molecules/product_molecules/product_molecules.dart';
 import 'package:flutter/material.dart';
 
 class DescriptionSection extends StatelessWidget {

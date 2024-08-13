@@ -1,6 +1,6 @@
-import 'package:arkatama_test/app/features/onboarding/onboarding.dart';
-import 'package:arkatama_test/app/features/onboarding/view/onboarding_feature_page.dart';
-import 'package:arkatama_test/app/features/product/product.dart';
+import 'package:aksamedia_test/app/features/onboarding/onboarding.dart';
+import 'package:aksamedia_test/app/features/onboarding/view/onboarding_feature_page.dart';
+import 'package:aksamedia_test/app/features/product/product.dart';
 
 class AppPages{
   AppPages._();

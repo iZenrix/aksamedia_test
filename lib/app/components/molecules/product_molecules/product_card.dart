@@ -1,9 +1,10 @@
-import 'package:arkatama_test/app/components/atoms/custom_bottom_sheet.dart';
-import 'package:arkatama_test/app/components/atoms/primary_button.dart';
-import 'package:arkatama_test/app/components/atoms/text/body_text.dart';
-import 'package:arkatama_test/app/components/atoms/text/label_text.dart';
-import 'package:arkatama_test/app/components/atoms/text/title_text.dart';
-import 'package:arkatama_test/app/features/product/helper/badge_clipper.dart';
+
+import 'package:aksamedia_test/app/components/atoms/custom_bottom_sheet.dart';
+import 'package:aksamedia_test/app/components/atoms/primary_button.dart';
+import 'package:aksamedia_test/app/components/atoms/text/body_text.dart';
+import 'package:aksamedia_test/app/components/atoms/text/label_text.dart';
+import 'package:aksamedia_test/app/components/atoms/text/title_text.dart';
+import 'package:aksamedia_test/app/features/product/helper/badge_clipper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

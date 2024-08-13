@@ -1,7 +1,7 @@
-import 'package:arkatama_test/app/components/molecules/product_molecules/product_molecules.dart';
-import 'package:arkatama_test/app/components/organisms/product_organisms/product_organisms.dart';
-import 'package:arkatama_test/app/components/templates/product_templates/product_feature_template.dart';
-import 'package:arkatama_test/app/features/product/controller/product_controller.dart';
+import 'package:aksamedia_test/app/components/molecules/product_molecules/product_molecules.dart';
+import 'package:aksamedia_test/app/components/organisms/product_organisms/product_organisms.dart';
+import 'package:aksamedia_test/app/components/templates/product_templates/product_feature_template.dart';
+import 'package:aksamedia_test/app/features/product/controller/product_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

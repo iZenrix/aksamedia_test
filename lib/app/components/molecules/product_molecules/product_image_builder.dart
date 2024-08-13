@@ -1,4 +1,4 @@
-import 'package:arkatama_test/app/components/atoms/product_atoms/product_image.dart';
+import 'package:aksamedia_test/app/components/atoms/product_atoms/product_atoms.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

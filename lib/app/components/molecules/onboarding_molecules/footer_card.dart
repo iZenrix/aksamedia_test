@@ -1,6 +1,6 @@
-import 'package:arkatama_test/app/components/atoms/primary_button.dart';
-import 'package:arkatama_test/app/components/atoms/text/body_text.dart';
-import 'package:arkatama_test/app/components/atoms/text/headline_text.dart';
+import 'package:aksamedia_test/app/components/atoms/primary_button.dart';
+import 'package:aksamedia_test/app/components/atoms/text/body_text.dart';
+import 'package:aksamedia_test/app/components/atoms/text/headline_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

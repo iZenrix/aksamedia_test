@@ -1,5 +1,5 @@
-import 'package:arkatama_test/app/components/atoms/primary_button.dart';
-import 'package:arkatama_test/app/components/atoms/text/label_text.dart';
+import 'package:aksamedia_test/app/components/atoms/primary_button.dart';
+import 'package:aksamedia_test/app/components/atoms/text/label_text.dart';
 import 'package:flutter/material.dart';
 
 class FooterButtonRow extends StatelessWidget {

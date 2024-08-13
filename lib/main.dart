@@ -1,9 +1,10 @@
-import 'package:arkatama_test/app/core/theme/text_theme.dart';
-import 'package:arkatama_test/app/routes/app_pages.dart';
+import 'package:aksamedia_test/app/core/theme/text_theme.dart';
+import 'package:aksamedia_test/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

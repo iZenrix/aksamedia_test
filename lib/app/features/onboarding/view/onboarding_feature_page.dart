@@ -1,10 +1,10 @@
-import 'package:arkatama_test/app/components/atoms/onboarding_atoms/onboarding_atoms.dart';
-import 'package:arkatama_test/app/components/molecules/onboarding_molecules/onboarding_molecules.dart';
-import 'package:arkatama_test/app/components/organisms/onboarding_organisms/onboarding_organisms.dart';
-import 'package:arkatama_test/app/components/templates/onboarding_templates/onboarding_template.dart';
-import 'package:arkatama_test/app/features/onboarding/controller/onboarding_controller.dart';
-import 'package:arkatama_test/app/features/onboarding/model/onboarding_model.dart';
-import 'package:arkatama_test/app/features/product/view/product_feature_page.dart';
+import 'package:aksamedia_test/app/components/atoms/onboarding_atoms/onboarding_atoms.dart';
+import 'package:aksamedia_test/app/components/molecules/onboarding_molecules/onboarding_molecules.dart';
+import 'package:aksamedia_test/app/components/organisms/onboarding_organisms/onboarding_organisms.dart';
+import 'package:aksamedia_test/app/components/templates/onboarding_templates/onboarding_template.dart';
+import 'package:aksamedia_test/app/features/onboarding/controller/onboarding_controller.dart';
+import 'package:aksamedia_test/app/features/onboarding/model/onboarding_model.dart';
+import 'package:aksamedia_test/app/features/product/view/product_feature_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

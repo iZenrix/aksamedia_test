@@ -1,5 +1,5 @@
-import 'package:arkatama_test/app/components/atoms/text/body_text.dart';
-import 'package:arkatama_test/app/components/atoms/text/title_text.dart';
+import 'package:aksamedia_test/app/components/atoms/text/body_text.dart';
+import 'package:aksamedia_test/app/components/atoms/text/title_text.dart';
 import 'package:flutter/material.dart';
 
 class PriceInfo extends StatelessWidget {

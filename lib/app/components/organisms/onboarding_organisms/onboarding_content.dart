@@ -1,5 +1,5 @@
-import 'package:arkatama_test/app/components/atoms/onboarding_atoms/onboarding_atoms.dart';
-import 'package:arkatama_test/app/components/molecules/onboarding_molecules/footer_card.dart';
+import 'package:aksamedia_test/app/components/atoms/onboarding_atoms/onboarding_atoms.dart';
+import 'package:aksamedia_test/app/components/molecules/onboarding_molecules/onboarding_molecules.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingContent extends StatelessWidget {
