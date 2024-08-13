@@ -1,3 +1,4 @@
+import 'package:arkatama_test/app/components/atoms/text/body_text.dart';
 import 'package:arkatama_test/app/components/molecules/product_molecules/product_molecules.dart';
 import 'package:flutter/material.dart';
 
@@ -32,14 +33,20 @@ class ProductOptionSelector extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const LabelText(text: 'Ukuran'),
+            const BodyMediumText(
+              text: 'Ukuran',
+              color: Color(0xff242626),
+            ),
             const SizedBox(height: 8),
             SizeSelector(
               selectedSize: selectedSize,
               onSizeSelected: onSizeSelected,
             ),
             const SizedBox(height: 14),
-            const LabelText(text: 'Warna'),
+            const BodyMediumText(
+              text: 'Warna',
+              color: Color(0xff242626),
+            ),
             const SizedBox(height: 8),
             ColorSelector(
               selectedColor: selectedColor,
@@ -51,16 +58,13 @@ class ProductOptionSelector extends StatelessWidget {
                 children: [
                   buildTextSpan(
                     text: 'Stok : ',
-                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                           color: const Color(0xff242626),
                         ),
                   ),
                   buildTextSpan(
                     text: '99+ pcs',
-                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                          fontSize: 14,
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                           fontWeight: FontWeight.w700,
                           color: const Color(0xff242626),
                         ),
@@ -75,28 +79,9 @@ class ProductOptionSelector extends StatelessWidget {
   }
 }
 
-class LabelText extends StatelessWidget {
-  final String text;
-
-  const LabelText({super.key, required this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: const TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.bold,
-      ),
-    );
-  }
-}
-
 TextSpan buildTextSpan({
   required String text,
   required TextStyle style,
-  FontWeight? fontWeight,
-  Color color = const Color(0xff242626),
 }) {
   return TextSpan(
     text: text,

@@ -1,4 +1,5 @@
 import 'package:arkatama_test/app/components/atoms/product_atoms/product_atoms.dart';
+import 'package:arkatama_test/app/components/atoms/text/title_text.dart';
 import 'package:flutter/material.dart';
 
 class ToggleButton extends StatelessWidget {
@@ -18,12 +19,9 @@ class ToggleButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            isExpanded ? 'Sembunyikan' : 'Selengkapnya',
-            style: const TextStyle(
-              color: Colors.blue,
-              fontWeight: FontWeight.w500,
-            ),
+          TitleSmallText(
+            text: isExpanded ? 'Sembunyikan' : 'Selengkapnya',
+            color: const Color(0xff0EA5E9),
           ),
           ToggleIcon(isExpanded: isExpanded),
         ],

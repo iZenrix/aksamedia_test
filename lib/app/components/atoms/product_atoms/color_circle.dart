@@ -14,7 +14,9 @@ class ColorCircle extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: color,
-        border: isSelected ? Border.all(color: const Color(0xff242626), width: 2) : null,
+        border: isSelected
+            ? Border.all(color: const Color(0xff242626), width: 2)
+            : null,
       ),
     );
   }

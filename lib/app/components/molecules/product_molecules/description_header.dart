@@ -1,23 +1,42 @@
+import 'package:arkatama_test/app/components/atoms/text/title_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 class DescriptionHeader extends StatelessWidget {
-  const DescriptionHeader({super.key});
+  const DescriptionHeader({super.key, required this.textCopy});
+
+  final String textCopy;
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          'Deskripsi',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
+        const TitleMediumText(
+          text: 'Deskripsi',
+          color: Color(0xff242626),
         ),
-        Icon(
-          Icons.copy,
-          color: Colors.blue,
+        GestureDetector(
+          onTap: () {
+            Clipboard.setData(
+              ClipboardData(
+                text: textCopy,
+              ),
+            );
+            Get.snackbar(
+              'Berhasil',
+              'Deskripsi berhasil disalin',
+              snackPosition: SnackPosition.TOP,
+              backgroundColor: const Color(0xff00A3F5),
+              colorText: const Color(0xffffffff),
+            );
+          },
+          child: Image.asset(
+            'assets/images/product/icons/copy-icon.png',
+            width: 24,
+            height: 24,
+          ),
         ),
       ],
     );

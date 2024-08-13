@@ -32,6 +32,7 @@ class TitleMediumText extends StatelessWidget {
   final Color? color;
   final TextAlign? textAlign;
   final FontWeight? fontWeight;
+  final double? fontSize;
 
   const TitleMediumText({
     super.key,
@@ -39,6 +40,7 @@ class TitleMediumText extends StatelessWidget {
     this.color,
     this.textAlign,
     this.fontWeight,
+    this.fontSize,
   });
 
   @override
@@ -49,6 +51,7 @@ class TitleMediumText extends StatelessWidget {
       style: Theme.of(context).textTheme.titleMedium!.copyWith(
             color: color,
             fontWeight: fontWeight,
+            fontSize: fontSize,
           ),
     );
   }

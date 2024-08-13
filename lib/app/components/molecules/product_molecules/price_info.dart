@@ -1,3 +1,5 @@
+import 'package:arkatama_test/app/components/atoms/text/body_text.dart';
+import 'package:arkatama_test/app/components/atoms/text/title_text.dart';
 import 'package:flutter/material.dart';
 
 class PriceInfo extends StatelessWidget {
@@ -16,21 +18,15 @@ class PriceInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          price,
-          style: Theme.of(context).textTheme.titleMedium!.copyWith(
-            color: const Color(0xff000000),
-            fontWeight: FontWeight.w700,
-          ),
+        TitleMediumText(
+          text: price,
+          color: const Color(0xff000000),
+          fontWeight: FontWeight.w700,
         ),
         const SizedBox(height: 2),
-        Text(
-          description,
-          style: const TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-            color: Color(0xff848C8B),
-          ),
+        BodyMediumText(
+          text: description,
+          color: const Color(0xff697170),
         ),
       ],
     );

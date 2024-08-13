@@ -24,7 +24,7 @@ class ProductImageBuilder extends StatelessWidget {
         itemCount: 4,
         itemBuilder: (context, index) {
           return const ProductImage(
-            imagePath: 'assets/images/product/product-image.png',
+            imagePath: 'assets/images/product/item-image.png',
           );
         },
       ),

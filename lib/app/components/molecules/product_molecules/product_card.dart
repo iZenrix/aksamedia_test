@@ -1,6 +1,11 @@
+import 'package:arkatama_test/app/components/atoms/custom_bottom_sheet.dart';
 import 'package:arkatama_test/app/components/atoms/primary_button.dart';
+import 'package:arkatama_test/app/components/atoms/text/body_text.dart';
+import 'package:arkatama_test/app/components/atoms/text/label_text.dart';
+import 'package:arkatama_test/app/components/atoms/text/title_text.dart';
 import 'package:arkatama_test/app/features/product/helper/badge_clipper.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProductCard extends StatelessWidget {
   final String imageUrl;
@@ -39,40 +44,40 @@ class ProductCard extends StatelessWidget {
               ),
             ),
             Positioned(
-                bottom: 6,
-                left: 10,
-                child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                  decoration: BoxDecoration(
-                    color: const Color(0xff0EA5E9).withOpacity(0.8),
-                    borderRadius: const BorderRadius.all(Radius.circular(6)),
-                  ),
-                  child: RichText(
-                    text: const TextSpan(
-                      children: [
-                        TextSpan(
-                          text: '30% ',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 10,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'Komisi',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 10,
-                            fontWeight:
-                            FontWeight.w400,
-                          ),
-                        ),
-                      ],
-                    ),
+              bottom: 6,
+              left: 10,
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 8,
+                  vertical: 4,
+                ),
+                decoration: BoxDecoration(
+                  color: const Color(0xff0EA5E9).withOpacity(0.8),
+                  borderRadius: const BorderRadius.all(Radius.circular(6)),
+                ),
+                child: RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: '30% ',
+                        style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                              color: const Color(0xffFFFFFF),
+                              fontSize: 10,
+                            ),
+                      ),
+                      TextSpan(
+                        text: 'Komisi',
+                        style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                              color: const Color(0xffFFFFFF),
+                              fontSize: 10,
+                              fontWeight: FontWeight.w400,
+                            ),
+                      ),
+                    ],
                   ),
                 ),
               ),
+            ),
             if (isNew)
               Positioned(
                 top: 0,
@@ -88,13 +93,11 @@ class ProductCard extends StatelessWidget {
                     ),
                     width: 32,
                     height: 32,
-                    child: const Text(
-                      'New',
-                      style: TextStyle(
-                        color: Color(0xff000000),
-                        fontWeight: FontWeight.w600,
-                        fontSize: 10,
-                      ),
+                    child: const LabelSmallText(
+                      text: 'New',
+                      color: Color(0xff000000),
+                      fontWeight: FontWeight.w700,
+                      fontSize: 10,
                     ),
                   ),
                 ),
@@ -104,67 +107,75 @@ class ProductCard extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
+            Container(
+              margin: const EdgeInsets.only(top: 8),
+              child: LabelMediumText(
+                text: title,
+                color: const Color(0xff000000),
               ),
             ),
             const SizedBox(height: 4),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'Harga Reseller',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xff848C8B),
-                      ),
-                    ),
-                    Text(
-                      price,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xff848C8B),
-                      ),
-                    ),
-                  ],
-                ),
-                const Row(
-                  children: [
-                    Icon(
-                      Icons.star,
-                      color: Color(0xffFFC107),
-                      size: 12,
-                    ),
-                    SizedBox(width: 4),
-                    Text(
-                      '99+ pcs',
-                      style: TextStyle(
+            SizedBox(
+              width: Get.width * 0.4,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const BodySmallText(
+                        text: 'Harga Reseller',
                         fontSize: 10,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xff0EA5E9),
+                        color: Color(0xff697170),
                       ),
+                      TitleSmallText(
+                        text: price,
+                        fontWeight: FontWeight.w700,
+                        color: const Color(0xff16A34A),
+                      )
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 3),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Image.asset(
+                          'assets/images/product/icons/shop-icon.png',
+                          width: 12,
+                          height: 12,
+                        ),
+                        const BodySmallText(
+                          text: ' 99+ pcs',
+                          fontSize: 10,
+                          color: Color(0xff697170),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 4),
             PrimaryButton(
-              onPressed: () {},
-              text: 'Bagikan Produk',
+              onPressed: () {
+                showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return const CustomBottomSheet();
+                  },
+                );
+              },
               width: 160,
               height: 32,
               borderRadius: 6,
               fontWeight: FontWeight.w500,
-              foregroundColor: const Color(0xffffffff),
+              widget: const BodySmallText(
+                text: 'Bagikan Produk',
+                fontSize: 12,
+                color: Color(0xffffffff),
+              ),
             ),
           ],
         ),

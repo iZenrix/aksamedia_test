@@ -16,8 +16,8 @@ class ImageButton extends StatelessWidget {
       onTap: onPressed,
       child: Image.asset(
         imagePath,
-        width: 30,
-        height: 30,
+        width: 20,
+        height: 20,
       ),
     );
   }

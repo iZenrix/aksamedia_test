@@ -29,7 +29,7 @@ class ProductDetailSection extends StatelessWidget {
           ),
           const SizedBox(height: 14),
           const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               PriceInfo(
                 price: 'Rp 178.000',
@@ -40,8 +40,8 @@ class ProductDetailSection extends StatelessWidget {
                 height: 40,
               ),
               PriceInfo(
-                price: 'Rp 178.000',
-                description: 'Harga Customer',
+                price: 'Rp 142.400',
+                description: 'Harga Reseller',
               ),
             ],
           ),

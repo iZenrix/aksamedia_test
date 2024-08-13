@@ -1,3 +1,5 @@
+import 'package:arkatama_test/app/components/atoms/text/body_text.dart';
+import 'package:arkatama_test/app/components/atoms/text/title_text.dart';
 import 'package:flutter/material.dart';
 
 class ProductBadge extends StatelessWidget {
@@ -13,20 +15,15 @@ class ProductBadge extends StatelessWidget {
       ),
       child: const Row(
         children: [
-          Text(
-            'NEW',
-            style: TextStyle(
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
-            ),
+          TitleMediumText(
+            text: 'NEW',
+            fontWeight: FontWeight.w700,
+            color: Color(0xff000000),
           ),
           SizedBox(width: 5),
-          Text(
-            'Product Baru',
-            style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-            ),
+          BodyMediumText(
+            text: 'Product Baru',
+            color: Color(0xff000000),
           ),
         ],
       ),

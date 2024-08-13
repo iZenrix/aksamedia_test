@@ -64,14 +64,14 @@ class ProductView extends GetView<ProductController> {
                             },
                           ),
                         ),
-                        ProductList(
-                          title: 'Produk lain dari Irvie group official',
-                          products: controller.relatedProducts,
-                        ),
-                        ProductList(
-                          title: 'Produk Serupa',
-                          products: controller.relatedProducts,
-                        ),
+                        // ProductList(
+                        //   title: 'Produk lain dari Irvie group official',
+                        //   products: controller.relatedProducts,
+                        // ),
+                        // ProductList(
+                        //   title: 'Produk Serupa',
+                        //   products: controller.relatedProducts,
+                        // ),
                         Container(
                           margin: const EdgeInsets.fromLTRB(20, 20, 20, 0),
                           child: Row(

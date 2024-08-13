@@ -1,3 +1,4 @@
+import 'package:arkatama_test/app/components/atoms/text/body_text.dart';
 import 'package:arkatama_test/app/components/molecules/product_molecules/product_molecules.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,21 @@ class DescriptionSection extends StatelessWidget {
     required this.isExpanded,
     required this.onToggle,
   });
+
+  final String description = '*New Material*\n'
+      'Terbuat dari bahan 100% Katun Linen yang\n'
+      'membuat nyaman jika digunakan.\n'
+      'Menggunakan fit Relaxed Fit.\n'
+      '-\n'
+      'SIZE CHART RELAXED SHIRT....\n'
+      '-\n'
+      'Detail tambahan:\n'
+      '- Tersedia dalam berbagai ukuran dari S hingga XL.\n'
+      '- Tersedia dalam berbagai warna: Putih, Hitam, Abu-abu, dan Biru Navy.\n'
+      '- Memiliki ketahanan warna yang baik meskipun dicuci berulang kali.\n'
+      '- Material yang ramah lingkungan dan mudah didaur ulang.\n'
+      '- Jahitan yang kuat dan rapi untuk ketahanan jangka panjang.\n'
+      '- Desain yang modern dan stylish cocok untuk berbagai kesempatan.';
 
   @override
   Widget build(BuildContext context) {
@@ -29,22 +45,13 @@ class DescriptionSection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const DescriptionHeader(),
+            DescriptionHeader(
+              textCopy: description,
+            ),
             const SizedBox(height: 8.0),
-            Text(
-              '*New Material*\n'
-                  'Terbuat dari bahan 100% Katun Linen yang membuat nyaman jika digunakan.\n'
-                  'Menggunakan fit Relaxed Fit.\n'
-                  '-\n'
-                  'SIZE CHART RELAXED SHIRT....\n'
-                  '-\n'
-                  'Detail tambahan:\n'
-                  '- Tersedia dalam berbagai ukuran dari S hingga XL.\n'
-                  '- Tersedia dalam berbagai warna: Putih, Hitam, Abu-abu, dan Biru Navy.\n'
-                  '- Memiliki ketahanan warna yang baik meskipun dicuci berulang kali.\n'
-                  '- Material yang ramah lingkungan dan mudah didaur ulang.\n'
-                  '- Jahitan yang kuat dan rapi untuk ketahanan jangka panjang.\n'
-                  '- Desain yang modern dan stylish cocok untuk berbagai kesempatan.',
+            BodyMediumText(
+              text: description,
+              color: const Color(0xff000000),
               maxLines: isExpanded ? 20 : 6,
               overflow: TextOverflow.ellipsis,
             ),

@@ -1,4 +1,5 @@
 import 'package:arkatama_test/app/components/atoms/primary_button.dart';
+import 'package:arkatama_test/app/components/atoms/text/label_text.dart';
 import 'package:flutter/material.dart';
 
 class FooterButtonRow extends StatelessWidget {
@@ -14,23 +15,25 @@ class FooterButtonRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+      margin: const EdgeInsets.fromLTRB(20, 16, 20, 0),
       child: Row(
         children: [
           Expanded(
-            flex: 2,
+            flex: 3,
             child: PrimaryButton(
               height: 40,
               backgroundColor: const Color(0xffFFFFFF),
-              foregroundColor: const Color(0xff242626),
               borderRadius: 10,
-              text: 'Tambahkan ke toko',
               borderSide: const BorderSide(
                 color: Color(0xff242626), // Border color
                 width: 1, // Border width
               ),
               padding: EdgeInsets.zero,
               onPressed: () {},
+              widget: const LabelLargeText(
+                text: 'Tambahkan ke toko',
+                color: Color(0xff242626),
+              ),
             ),
           ),
           const SizedBox(width: 10),
@@ -41,9 +44,10 @@ class FooterButtonRow extends StatelessWidget {
               backgroundColor: const Color(0xff242626),
               foregroundColor: const Color(0xffffffff),
               borderRadius: 10,
-              widget: const Icon(
-                Icons.shopping_cart,
-                size: 20,
+              widget: Image.asset(
+                'assets/images/product/icons/shopping-cart.png',
+                width: 20, // Icon width
+                height: 20, // Icon height
               ),
               height: 40,
             ),

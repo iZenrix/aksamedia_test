@@ -12,6 +12,28 @@ class ProductFeaturePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(ProductController());
 
+    List<ProductCard> relatedProducts = List.generate(
+      3,
+          (index) => ProductCard(
+        imageUrl: 'assets/images/product/product-image.png',
+        title: 'Beauty Set by Irvie',
+        price: 'Rp 142.400',
+        isNew: isNewProduct(index, isFirstList: true),
+        commission: 'Komisi',
+      ),
+    );
+
+    List<ProductCard> similarProducts = List.generate(
+      3,
+          (index) => ProductCard(
+        imageUrl: 'assets/images/product/product-image.png',
+        title: 'Beauty Set by Irvie',
+        price: 'Rp 142.400',
+        isNew: isNewProduct(index, isFirstList: false),
+        commission: 'Komisi',
+      ),
+    );
+
     return ProductFeatureTemplate(
       header: const ProductHeader(),
       body: Column(
@@ -64,11 +86,11 @@ class ProductFeaturePage extends StatelessWidget {
                   ),
                   ProductList(
                     title: 'Produk lain dari Irvie group official',
-                    products: controller.relatedProducts,
+                    products: relatedProducts,
                   ),
                   ProductList(
                     title: 'Produk Serupa',
-                    products: controller.relatedProducts,
+                    products: similarProducts,
                   ),
                   FooterButtonRow(
                     onPrimaryPressed: () {},
@@ -81,5 +103,13 @@ class ProductFeaturePage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  bool isNewProduct(int index, {required bool isFirstList}) {
+    if (isFirstList) {
+      return index % 2 != 0;
+    } else {
+      return index % 2 == 0;
+    }
   }
 }

@@ -1,3 +1,4 @@
+import 'package:arkatama_test/app/components/atoms/text/title_text.dart';
 import 'package:flutter/material.dart';
 
 class ProductTitle extends StatelessWidget {
@@ -5,25 +6,19 @@ class ProductTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Beauty Set by Irvie',
-          style: Theme.of(context).textTheme.titleMedium!.copyWith(
-            color: const Color(0xff000000),
-            fontSize: 20,
-          ),
+        TitleMediumText(
+          text: 'Beauty Set by Irvie',
+          fontSize: 20,
+          color: Color(0xff000000),
         ),
-        const SizedBox(height: 2),
-        const Text(
-          'Irvie group official',
-          style: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-            color: Color(0xff848C8B),
-          ),
-        ),
+        SizedBox(height: 2),
+        TitleSmallText(
+          text: 'Irvie group official',
+          color: Color(0xff848C8B),
+        )
       ],
     );
   }

@@ -32,6 +32,8 @@ class BodyMediumText extends StatelessWidget {
   final Color? color;
   final TextAlign? textAlign;
   final FontWeight? fontWeight;
+  final int? maxLines;
+  final TextOverflow? overflow;
 
   const BodyMediumText({
     super.key,
@@ -39,11 +41,15 @@ class BodyMediumText extends StatelessWidget {
     this.color,
     this.textAlign,
     this.fontWeight,
+    this.maxLines,
+    this.overflow,
   });
 
   @override
   Widget build(BuildContext context) {
     return Text(
+      overflow: overflow,
+      maxLines: maxLines,
       textAlign: textAlign,
       text,
       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
@@ -59,6 +65,7 @@ class BodySmallText extends StatelessWidget {
   final Color? color;
   final TextAlign? textAlign;
   final FontWeight? fontWeight;
+  final double? fontSize;
 
   const BodySmallText({
     super.key,
@@ -66,6 +73,7 @@ class BodySmallText extends StatelessWidget {
     this.color,
     this.textAlign,
     this.fontWeight,
+    this.fontSize,
   });
 
   @override
@@ -76,6 +84,7 @@ class BodySmallText extends StatelessWidget {
       style: Theme.of(context).textTheme.bodySmall!.copyWith(
             color: color,
             fontWeight: fontWeight,
+            fontSize: fontSize,
           ),
     );
   }

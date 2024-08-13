@@ -18,30 +18,26 @@ class CommissionInfo extends StatelessWidget {
       ),
       child: Center(
         child: RichText(
-          text: const TextSpan(
+          text: TextSpan(
             children: [
               TextSpan(
                 text: 'Komisi',
-                style: TextStyle(
-                  color: Color(0xff363939),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                ),
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: const Color(0xff363939),
+                    ),
               ),
               TextSpan(
-                text: ' Rp 35.000',
-                style: TextStyle(
-                  color: Color(0xff363939),
+                text: ' Rp35.600',
+                style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                      color: const Color(0xff363939),
                   fontSize: 18,
-                  fontWeight: FontWeight.w600,
-                ),
+                  fontWeight: FontWeight.w700,
+                    ),
               ),
               TextSpan(
                 text: ' (20%)',
-                style: TextStyle(
-                  color: Color(0xff363939),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  color: const Color(0xff363939),
                 ),
               ),
             ],

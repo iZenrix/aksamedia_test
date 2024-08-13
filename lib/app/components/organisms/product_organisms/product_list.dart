@@ -1,3 +1,4 @@
+import 'package:arkatama_test/app/components/atoms/text/title_text.dart';
 import 'package:arkatama_test/app/components/molecules/product_molecules/product_molecules.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,24 +20,21 @@ class ProductList extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
+          TitleMediumText(
+            text: title,
+            color: const Color(0xff242626),
           ),
           const SizedBox(height: 16),
           SizedBox(
-            height: Get.height * 0.35,
+            height: Get.height * 0.34,
             child: ListView.builder(
               padding: EdgeInsets.zero,
               scrollDirection: Axis.horizontal,
-              itemCount: 3,
+              itemCount: products.length,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.only(right: 20),
-                  child: products[0],
+                  child: products[index],
                 );
               },
             ),

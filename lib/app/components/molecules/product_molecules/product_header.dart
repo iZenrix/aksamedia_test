@@ -8,7 +8,7 @@ class ProductHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 40),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -23,7 +23,7 @@ class ProductHeader extends StatelessWidget {
               ImageButton(
                 imagePath: 'assets/images/product/icons/import.png',
               ),
-              SizedBox(width: 10),
+              SizedBox(width: 15),
               ImageButton(
                 imagePath: 'assets/images/product/icons/shopping-cart.png',
               ),
