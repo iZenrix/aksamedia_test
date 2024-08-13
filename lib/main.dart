@@ -1,5 +1,5 @@
 import 'package:arkatama_test/app/core/theme/text_theme.dart';
-import 'package:arkatama_test/app/features/onboarding/view/onboarding_view.dart';
+import 'package:arkatama_test/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         textTheme: buildTextTheme(),
       ),
-      home: const OnboardingView(),
+      initialRoute: AppPages.initial,
+      getPages: AppPages.routes,
     );
   }
 }

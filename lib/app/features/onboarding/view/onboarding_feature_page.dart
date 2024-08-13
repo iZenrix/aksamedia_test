@@ -11,10 +11,10 @@ import 'package:get/get.dart';
 class OnboardingView extends GetView<OnboardingController> {
   const OnboardingView({super.key});
 
+  static const String onboardingRoute = '/onboarding';
+
   @override
   Widget build(BuildContext context) {
-    var controller = Get.put(OnboardingController());
-
     return OnboardingTemplate(
       content: OnboardingScreen(
         pageController: controller.pageController,
@@ -31,9 +31,7 @@ class OnboardingView extends GetView<OnboardingController> {
       ),
       skipButton: SkipText(
         onTap: () {
-          Get.to(
-            () => const ProductFeaturePage(),
-          );
+          Get.toNamed(ProductFeaturePage.productRoute);
         },
       ),
       pageIndicator: Obx(

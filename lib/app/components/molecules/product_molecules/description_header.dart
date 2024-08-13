@@ -28,8 +28,8 @@ class DescriptionHeader extends StatelessWidget {
               'Berhasil',
               'Deskripsi berhasil disalin',
               snackPosition: SnackPosition.TOP,
-              backgroundColor: const Color(0xff00A3F5),
-              colorText: const Color(0xffffffff),
+              backgroundColor: const Color(0xffECE806),
+              colorText: const Color(0xff000000),
             );
           },
           child: Image.asset(

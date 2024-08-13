@@ -5,13 +5,13 @@ import 'package:arkatama_test/app/features/product/controller/product_controller
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ProductFeaturePage extends StatelessWidget {
+class ProductFeaturePage extends GetView<ProductController> {
   const ProductFeaturePage({super.key});
+
+  static const String productRoute = '/product';
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(ProductController());
-
     List<ProductCard> relatedProducts = List.generate(
       3,
           (index) => ProductCard(
@@ -89,6 +89,7 @@ class ProductFeaturePage extends StatelessWidget {
                     products: relatedProducts,
                   ),
                   ProductList(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                     title: 'Produk Serupa',
                     products: similarProducts,
                   ),

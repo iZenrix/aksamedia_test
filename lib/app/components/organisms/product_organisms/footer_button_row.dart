@@ -15,7 +15,7 @@ class FooterButtonRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(20, 16, 20, 0),
+      margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
       child: Row(
         children: [
           Expanded(

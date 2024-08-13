@@ -1,6 +1,6 @@
 import 'package:arkatama_test/app/features/onboarding/model/onboarding_model.dart';
 import 'package:arkatama_test/app/components/organisms/onboarding_organisms/onboarding_content.dart';
-import 'package:arkatama_test/app/features/product/product_view.dart';
+import 'package:arkatama_test/app/features/product/view/product_feature_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -36,7 +36,7 @@ class OnboardingScreen extends StatelessWidget {
               textButton: 'Selanjutnya',
               onPressed: () {
                 if (index == onboardingData.length - 1) {
-                  Get.to(() => const ProductView());
+                  Get.toNamed(ProductFeaturePage.productRoute);
                 } else {
                   onNextPressed();
                 }

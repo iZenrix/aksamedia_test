@@ -6,17 +6,18 @@ import 'package:get/get.dart';
 class ProductList extends StatelessWidget {
   final String title;
   final List<ProductCard> products;
+  final EdgeInsetsGeometry? padding;
 
   const ProductList({
     super.key,
     required this.title,
-    required this.products,
+    required this.products, this.padding,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
+      padding: padding ?? const EdgeInsets.fromLTRB(20, 16, 20, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
